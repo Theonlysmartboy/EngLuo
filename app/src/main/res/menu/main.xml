@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:icon="@drawable/eng_luo"
+        android:title="@string/action_settings"
+        app:showAsAction="always" >
+        <menu>
+            <item
+                android:id="@+id/action_luoeng"
+                android:title="@string/luoeng"
+                android:icon="@drawable/luo_eng"
+                app:showAsAction="never"
+                android:orderInCategory="100"/>
+            <item
+                android:id="@+id/action_engluo"
+                android:title="@string/engluo"
+                android:icon="@drawable/eng_luo"
+                android:orderInCategory="100"
+                app:showAsAction="never"/>
+        </menu>
+    </item>
+</menu>
