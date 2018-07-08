@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     DictionaryFragment dictionaryFragment;
     BookmarkFragment bookmarkFragment;
     AboutFragment aboutFragment;
+    DetailFragment detailFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,12 +52,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        // new dictionary objects
+        // new fragment objects
         dictionaryFragment = new DictionaryFragment();
         bookmarkFragment = new BookmarkFragment();
         aboutFragment = new AboutFragment();
+        detailFragment = new DetailFragment();
         // Call the gotoFragment method and pass the dictionaryFragment as the default ontop parameter
         gotToFragment(dictionaryFragment, true);
+        dictionaryFragment.setFragmentListener(new FragmentListener() {
+            @Override
+            public void onItemClick() {
+                gotToFragment(detailFragment,false);
+
+            }
+        });
     }
 
     @Override
