@@ -10,14 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
-
 public class BookmarkFragment extends Fragment {
 private FragmentListener fragmentListener;
     public BookmarkFragment() {
         // Required empty public constructor
     }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,11 +29,9 @@ private FragmentListener fragmentListener;
                 if(fragmentListener != null){
                     fragmentListener.onItemClick();
                 }
-
             }
         });
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
