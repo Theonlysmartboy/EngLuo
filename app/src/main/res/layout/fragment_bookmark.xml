@@ -3,13 +3,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorAccent" >
-
-       <TextView
+           <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="@dimen/standard_text_size"
-        android:textColor="@color/colorWhite"
-        android:gravity="center"
-        android:text="@string/bookmark_fragment" />
+        android:orientation="vertical"
+        android:gravity="center">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="@dimen/standard_text_size"
+                   android:textColor="@color/colorWhite"
+                   android:gravity="center"
+                   android:text="@string/bookmark_fragment" />
+        <Button
+            android:id="@+id/GoToDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="Go To Detail"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/standard_text_size"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
 
 </FrameLayout>

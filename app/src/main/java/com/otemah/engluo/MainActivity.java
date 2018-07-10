@@ -66,6 +66,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             }
         });
+        bookmarkFragment.setFragmentListener(new FragmentListener() {
+            @Override
+            public void onItemClick() {
+                gotToFragment(detailFragment,false);
+            }
+        });
     }
 
     @Override
